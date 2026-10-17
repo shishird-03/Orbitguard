@@ -1,7 +1,7 @@
 # ORBITGUARD
 ### Real-time Space Situational Awareness console: 3D orbits, debris conjunctions, collision avoidance
 
-**CS3002-1 Computer Graphics and Visualization (IPCC), NMAMIT Nitte. Graphics mini project.**
+
 C++17 · OpenGL (fixed function) · freeGLUT · Dear ImGui · CMake
 
 ![Overview](docs/img/overview.png)
