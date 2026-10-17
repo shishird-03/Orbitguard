@@ -1,0 +1,17 @@
+{
+  "name": "Near-miss in LEO",
+  "description": "ORBITGUARD-1 (550 km, sun-synchronous) has a Cosmos-2251 debris fragment crossing its path at 50 minutes with a 350 m radial miss. Expect a RED alert; plan and commit an avoidance burn.",
+  "catalog": { "path": "data/catalog.tle", "limit": 4000 },
+  "config": { "screening": { "lookahead_s": 3600 } },
+  "objects": [
+    { "name": "ORBITGUARD-1", "norad": 99001, "kind": "payload", "alt_km": 550, "e": 0.0005,
+      "i_deg": 97.5, "raan_deg": 40, "argp_deg": 0, "M_deg": 10 }
+  ],
+  "intercepts": [
+    { "name": "COSMOS 2251 DEB (SIM)", "norad": 99002, "kind": "debris", "target": "ORBITGUARD-1",
+      "tca_s": 3000, "miss_km": 0.35, "i_deg": 74.0 }
+  ],
+  "follow": "ORBITGUARD-1",
+  "warp": 20,
+  "expect": { "tier": "RED", "pair": ["ORBITGUARD-1", "COSMOS 2251 DEB (SIM)"], "tca_s": 3000, "tca_tol_s": 5, "miss_km": 0.35 }
+}

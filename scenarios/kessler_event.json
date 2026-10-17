@@ -1,0 +1,20 @@
+{
+  "name": "Kessler event",
+  "description": "Two dense constellation shells 20 km apart. A derelict upper stage strikes a satellite at 10 minutes; the seeded fragment cloud crosses both shells and chain collisions follow. Kessler mode is on; collision distance is demo-scaled.",
+  "epoch_utc": "2026-10-15T12:00:00Z",
+  "config": {
+    "kessler": { "enabled": true, "collision_km": 2.0, "seed": 1957 },
+    "screening": { "lookahead_s": 1200 }
+  },
+  "walker": [
+    { "name": "IRIDIUM-SIM", "alt_km": 780, "i_deg": 86.4, "planes": 12, "per_plane": 20, "phasing": 1, "norad_base": 70000 },
+    { "name": "POLAR-SIM", "alt_km": 800, "i_deg": 98.0, "planes": 12, "per_plane": 20, "phasing": 3, "raan0_deg": 7.5, "norad_base": 71000 }
+  ],
+  "intercepts": [
+    { "name": "SL-16 R/B (SIM)", "norad": 72001, "kind": "rocket_body", "target": "IRIDIUM-SIM-0-0",
+      "tca_s": 600, "miss_km": 0.0, "i_deg": 50.0 }
+  ],
+  "follow": "IRIDIUM-SIM-0-0",
+  "warp": 60,
+  "expect": { "min_collisions": 2, "run_s": 21600 }
+}

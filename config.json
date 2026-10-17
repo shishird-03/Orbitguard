@@ -1,0 +1,36 @@
+{
+  "window": { "width": 1600, "height": 900, "msaa": true },
+  "sim": {
+    "tick_hz": 50, "warp_init": 60, "warp_max": 10000, "max_ticks_per_frame": 5,
+    "max_objects": 30000, "catalog": "data/catalog.tle"
+  },
+  "render": {
+    "earth_stacks": 48, "earth_slices": 96, "star_count": 4000, "point_size": 2.5,
+    "mesh_lod_distance": 0.6, "mesh_scale": 0.018, "mesh_lod_max": 200,
+    "trail_length": 400, "orbit_samples": 256, "station_cone_alt_km": 550
+  },
+  "screening": {
+    "slice_s": 10, "lookahead_s": 1800, "cell_km": 50, "vrel_max_kms": 15, "margin_km": 10,
+    "budget_ms": 6, "red_km": 1, "amber_km": 5, "yellow_km": 25,
+    "sigma_km": 0.2, "hard_body_km": 0.02, "alert_expire_s": 600, "formation_kms": 0.05
+  },
+  "planner": {
+    "dv_min_mps": 0.01, "dv_max_mps": 2.0, "dv_steps": 24, "safe_km": 5,
+    "sample_s": 20, "isp_s": 220, "mass_kg": 500
+  },
+  "kessler": {
+    "enabled": false, "collision_km": 0.1, "frag_k": 8, "frag_min": 200, "frag_max": 1000,
+    "dispersion_kms": 0.1, "asat_vrel_kms": 10, "reentry_alt_km": 120, "seed": 42
+  },
+  "hud": { "radar_range_km": 500, "radar_px": 220, "map_w": 400, "map_h": 200 },
+  "tour": { "duration_s": 40 },
+  "colors": {
+    "background": [0.0, 0.0, 0.02], "payload": [0.55, 0.85, 1.0], "debris": [1.0, 0.55, 0.2],
+    "rocket_body": [1.0, 0.9, 0.3], "fragment": [1.0, 0.25, 0.25], "selected": [0.2, 1.0, 0.4]
+  },
+  "stations": [
+    { "name": "ISTRAC Bengaluru", "lat_deg": 13.034, "lon_deg": 77.512, "alt_km": 0.9, "mask_deg": 10 },
+    { "name": "SDSC Sriharikota", "lat_deg": 13.72, "lon_deg": 80.23, "alt_km": 0.0, "mask_deg": 10 },
+    { "name": "SvalSat Svalbard", "lat_deg": 78.23, "lon_deg": 15.39, "alt_km": 0.5, "mask_deg": 5 }
+  ]
+}

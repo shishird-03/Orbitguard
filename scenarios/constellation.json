@@ -1,0 +1,12 @@
+{
+  "name": "Constellation shell",
+  "description": "A 1,584-satellite Walker 53 deg shell at 550 km (Starlink-like) plus a second shell at 570 km over the real catalog. Shows dense-shell screening load and the HSV heatmap.",
+  "catalog": { "path": "data/catalog.tle", "limit": 6000 },
+  "walker": [
+    { "name": "SHELL-A", "alt_km": 550, "i_deg": 53.0, "planes": 72, "per_plane": 22, "phasing": 17, "norad_base": 60000 },
+    { "name": "SHELL-B", "alt_km": 570, "i_deg": 70.0, "planes": 36, "per_plane": 20, "phasing": 5, "norad_base": 62000 }
+  ],
+  "follow": "SHELL-A-0-0",
+  "warp": 60,
+  "expect": {}
+}

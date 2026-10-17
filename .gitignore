@@ -1,0 +1,41 @@
+# build output
+build/
+out/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+x64/
+Release/
+Debug/
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exe
+*.lib
+*.exp
+
+# runtime output
+reports/
+
+# IDE / editor
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.vcxproj.user
+
+# tooling / agent state
+.claude/
+graphify-out/
+
+# OS junk
+Thumbs.db
+.DS_Store
+desktop.ini
+*.log
+*.tmp
